@@ -7,6 +7,12 @@ class MyArray {
   get(index) {
     return this.data[index]
   } //0(1)
+
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this.length;
+  } //O(1)
   
 }
 
