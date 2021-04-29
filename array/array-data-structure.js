@@ -4,6 +4,10 @@ class MyArray {
     this.data = {};
   }
 
+  get(index) {
+    return this.data[index]
+  } //0(1)
+  
 }
 
 const newArray = new MyArray();
