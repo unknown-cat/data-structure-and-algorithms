@@ -12,8 +12,15 @@ class MyArray {
     this.data[this.length] = item;
     this.length++;
     return this.length;
+  }//O(1)
+
+  pop() {
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    this.length--;
+    return lastItem;
   } //O(1)
-  
+
 }
 
 const newArray = new MyArray();
