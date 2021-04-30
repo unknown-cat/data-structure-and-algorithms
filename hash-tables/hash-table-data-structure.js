@@ -22,7 +22,21 @@ class HashTable {
     return this.data;
   } //O(n)
 
-  
+  get(key) {
+    const address = this._hash(key);
+    const currentBucket = this.data[address];
+
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          return currentBucket[i][1]
+        }
+      }
+    }
+    return undefined;
+  } //O(1) if no collisions (most times in a real life) !!! if low on memory
+  // it could become O(n)
+
 }
 
 const myHashTable = new HashTable(20);
