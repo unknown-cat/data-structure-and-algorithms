@@ -37,6 +37,26 @@ class HashTable {
   } //O(1) if no collisions (most times in a real life) !!! if low on memory
   // it could become O(n)
 
+  keys() {
+    const keysArray = [];
+
+    for (let i = 0; i < this.data.length; i++) {
+      // if it's not an empty memory cell
+      if (this.data[i] && this.data[i].length) {
+        // but also loop through all the potential collisions
+        if (this.data.length > 1) {
+          for (let j = 0; j < this.data[i].length; j++) {
+            keysArray.push(this.data[i][j][0])
+          }
+        } else {
+
+          keysArray.push(this.data[i][0])
+        }
+      }
+    }
+    return keysArray;
+  }
+
 }
 
 const myHashTable = new HashTable(20);
