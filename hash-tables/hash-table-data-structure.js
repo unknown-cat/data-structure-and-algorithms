@@ -11,6 +11,18 @@ class HashTable {
     }
     return hash;
   } //really fast we considering it like O(n)
+
+  set(key, value) {
+    let address = this._hash(key);
+
+    if (!this.data[address]) {
+      this.data[address] = [];
+    }
+    this.data[address].push([key, value]);
+    return this.data;
+  } //O(n)
+
+  
 }
 
 const myHashTable = new HashTable(20);
