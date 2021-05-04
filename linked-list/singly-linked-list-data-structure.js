@@ -49,6 +49,23 @@ class LinkedList {
     return this.printList()
   }
 
+  remove(index) {
+
+    if(index <= 0) {
+      return this.removeFirst()
+    }
+
+    if(index >= this.length) {
+      return this.removeLast()
+    }
+
+    const leader = this.traverseToIndex(index - 1);
+    const unwantedNode = leader.next;
+    leader.next = unwantedNode.next;
+    this.length--;
+    return this.printList()
+  }
+
   traverseToIndex(index) {
     let counter = 0;
     let currentNode = this.head;
@@ -60,4 +77,5 @@ class LinkedList {
 
     return currentNode
   }
+
 }
