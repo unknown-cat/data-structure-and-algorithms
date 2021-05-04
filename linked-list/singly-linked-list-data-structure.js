@@ -78,4 +78,16 @@ class LinkedList {
     return currentNode
   }
 
+  printList() {
+    const array = [];
+    let currentNode = this.head;
+
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+
+    return array;
+  }
+
 }
