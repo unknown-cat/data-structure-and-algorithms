@@ -34,6 +34,21 @@ class LinkedList {
     return this;
   }
 
+  insert(index, value) {
+    if (index >= this.length) {
+      return this.append(value)
+    }
+
+    const newNode = new Node(value);
+    const leader = this.traverseToIndex(index - 1);
+    const holdingPointer = leader.next;
+    leader.next = newNode;
+    newNode.next = holdingPointer;
+    this.length++;
+
+    return this.printList()
+  }
+
   traverseToIndex(index) {
     let counter = 0;
     let currentNode = this.head;
