@@ -35,6 +35,53 @@ class DoublyLinkedList {
     this.length++;
     return this;
   }
+
+  insert(index, value) {
+    if (index >= this.length) {
+      return this.append(value)
+    }
+
+    const newNode = new Node(value);
+    const leader = this.traverseToIndex(index - 1);
+    const follower = leader.next;
+    leader.next = newNode;
+    newNode.next = follower;
+    newNode.prev = leader;
+    follower.prev = newNode;
+    this.length++;
+    return this.printList()
+  }
+
+  remove(index) {
+
+    if (index <= 0) {
+      return this.removeFirst()
+    }
+
+    if (index >= this.length) {
+      return this.removeLast()
+    }
+
+    const leader = this.traverseToIndex(index - 1);
+    const unwantedNode = leader.next;
+    const afterUnwantedNode = unwantedNode.next;
+    leader.next = afterUnwantedNode;
+    afterUnwantedNode.prev = leader;
+    this.length--;
+    return this.printList()
+  }
+
+  traverseToIndex(index) {
+    let counter = 0;
+    let currentNode = this.head;
+
+    while (counter !== index) {
+      currentNode = currentNode.next;
+      counter++
+    }
+
+    return currentNode
+  }
 }
 
 const myDoublyLinkedList = new DoublyLinkedList(10);
