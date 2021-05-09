@@ -82,6 +82,17 @@ class DoublyLinkedList {
 
     return currentNode
   }
+
+  printList() {
+    const array = [];
+    let currentNode = this.head;
+
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    return array;
+  }
 }
 
 const myDoublyLinkedList = new DoublyLinkedList(10);
