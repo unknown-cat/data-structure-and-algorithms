@@ -13,5 +13,5 @@
 * [Linked List](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/linked-list)
 * Tree
 * Trie
-* Graph
+* [Graph](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/graph)
 * [Hash Tables](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/hash-tables)
