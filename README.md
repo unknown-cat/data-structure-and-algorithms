@@ -3,7 +3,7 @@
 ## Algorithms
  * [Sorting](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/sorting)
  * Dynamic Programming
- * BFS + DFS (Searching)
+ * [BFS + DFS (Searching)](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/searching)
  * Recursion
  
 ## Data Structure
