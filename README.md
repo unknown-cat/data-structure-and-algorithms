@@ -4,7 +4,7 @@
  * [Sorting](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/sorting)
  * Dynamic Programming
  * [BFS + DFS (Searching)](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/searching)
- * Recursion
+ * [Recursion](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/recursion)
  
 ## Data Structure
 * [Array](https://github.com/unknown-cat/data-structure-and-algorithms/tree/master/array)
